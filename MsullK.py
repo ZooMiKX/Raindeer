@@ -21,7 +21,7 @@ def get_text_messages(message):
         try:
             observation = mgr.weather_at_place(city)
         except pyowm.commons.exceptions.NotFoundError:
-            answer =("Вы неверно ввели город, введите КОРРЕКТНОЕ название: ")
+            answer =("Такого міста не існує :( Спробуйте ще раз: ")
             city = get_text_messages(message)
         else:
             w = observation.weather
